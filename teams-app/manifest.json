@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.16",
+  "version": "1.0.0",
+  "id": "760c7ee4-624a-4ee7-bc8f-04df094ae339",
+  "developer": {
+    "name": "Certis",
+    "websiteUrl": "https://h2o-teams-bot01.azurewebsites.net",
+    "privacyUrl": "https://h2o-teams-bot01.azurewebsites.net",
+    "termsOfUseUrl": "https://h2o-teams-bot01.azurewebsites.net"
+  },
+  "name": {
+    "short": "H2O Assistant",
+    "full": "H2O AI Assistant — Certis"
+  },
+  "description": {
+    "short": "AI assistant powered by h2oGPTe",
+    "full": "Chat with an AI assistant powered by H2O.ai's h2oGPTe platform. Ask questions, get answers, and interact with your data through natural language."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#0D2354",
+  "bots": [
+    {
+      "botId": "760c7ee4-624a-4ee7-bc8f-04df094ae339",
+      "scopes": ["personal", "team", "groupchat"],
+      "supportsFiles": false,
+      "isNotificationOnly": false,
+      "commandLists": [
+        {
+          "scopes": ["personal", "team", "groupchat"],
+          "commands": [
+            {
+              "title": "Help",
+              "description": "Show what I can do"
+            },
+            {
+              "title": "Hello",
+              "description": "Start a conversation"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": [
+    "h2o-teams-bot01.azurewebsites.net",
+    "token.botframework.com"
+  ]
+}

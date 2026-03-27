@@ -11,10 +11,6 @@ teams-h2o-bot/
 │   ├── h2o_bot.py         # Message handler & h2oGPTe session logic
 │   ├── config.py          # Configuration via environment variables
 │   └── requirements.txt
-├── h2o-local-tool/        # Optional MCP utility tool for h2oGPTe agents
-│   ├── server.py          # MCP stdio server
-│   ├── DEPLOYMENT.md
-│   └── requirements.txt
 └── teams-app/             # Teams app package
     ├── manifest.json
     ├── color.png
@@ -74,18 +70,6 @@ Teams requires a publicly accessible HTTPS URL to deliver messages. Deploy to Az
 az webapp up --runtime python:3.11 --name <your-app-name>
 ```
 
-## Optional: MCP Utility Tool
-
-The `h2o-local-tool/` directory contains an MCP server that provides utility functions (UUID generation, random selection) for use with h2oGPTe agents.
-
-```bash
-cd h2o-local-tool/
-pip install -r requirements.txt
-python server.py
-```
-
-See [h2o-local-tool/DEPLOYMENT.md](h2o-local-tool/DEPLOYMENT.md) for instructions on packaging and uploading to h2oGPTe.
-
 ## Teams App Package
 
 The `teams-app/` directory contains the manifest and icons needed to sideload or publish the bot in Microsoft Teams Admin Center.
@@ -97,4 +81,3 @@ The `teams-app/` directory contains the manifest and icons needed to sideload or
 | `botbuilder-core` | Microsoft Bot Framework |
 | `aiohttp` | Async HTTP server |
 | `h2ogpte` | H2O.ai GPTe SDK |
-| `mcp` | Model Context Protocol (local tool) |
